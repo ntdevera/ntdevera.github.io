@@ -274,6 +274,7 @@ footer {
   min-height: 500px;
   max-height: 1080px;
   background: url(../images/lead-bg.jpg);
+  background-attachment: fixed;
   background-size: cover;
   padding: 15px;
   overflow: hidden;
@@ -616,8 +617,11 @@ footer {
 */
 #contact {
   padding: 50px 15px;
-  background: #2a7b88;
+  background: url(../images/lead-bg.jpg);
+  background-attachment: fixed;
+  padding: 15px;
   text-align: center;
+  position: relative;
 }
 #contact h2 {
   margin: 0 0 15px 0;
@@ -625,7 +629,20 @@ footer {
   font-weight: 500;
 }
 
+#contact-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(30, 88, 97, 0.8);
+  z-index: 1;
+}
+
 #contact-form {
+  z-index: 10;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -638,6 +655,7 @@ footer {
   margin-bottom: 10px;
   background: #18464e;
   color: #fff;
+  z-index: 10;
   transition: 0.5s ease all;
 }
 #contact-form input::-webkit-input-placeholder, #contact-form textarea::-webkit-input-placeholder {
@@ -661,6 +679,7 @@ footer {
 #contact-form textarea {
   height: 150px;
   resize: none;
+  z-index: 10;
 }
 #contact-form button {
   display: block;
